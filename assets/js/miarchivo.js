@@ -1,6 +1,7 @@
 const JSONProductos = "productos.json";
 let datosObtenidos;
 //Funcion encargada de cargar los productos en la pagina princial. utilizando como referencia el JSON.
+//Esta funcion es dinamica, es decir, si se agregan mas productos en el JSON, se mostraran automaticamente en la pagina.
 function cargaProductos(){
     $.get(JSONProductos, function(respuesta, estado) {
         if(estado=="success"){
@@ -63,11 +64,15 @@ function cargaProductos(){
 
     })
 }
+
+//Se llama a todas las funciones necesarias para inicializar la pagina.
 cargaProductos();
 cargaCarrito();
 borraTodo()
 muestraCarrito();
 confirmaCompra()
+
+
 
 
 //Funcion para mostrar la cantidad de articulos en el carrito en el navbar
@@ -79,6 +84,7 @@ function cargaCarrito(){
 }
 
 //funcion para controlar las cantidades de items en el carrito (sumar o restar)
+// si le llega una accion, resta, en caso contrario suma
 function itemsCarrito(producto , accion){
     let cantidadProductos = localStorage.getItem('itemsCarrito');
     cantidadProductos = parseInt(cantidadProductos);
@@ -206,8 +212,6 @@ function confirmaCompra(){
 };
 
 
-
-
 //animacion del boton de carrito del navbar.
 $(".botonCarrito").hover(function() {
     $(".botonCarrito").animate({fontSize: '1.2em'}, "slow");
@@ -315,4 +319,32 @@ function botonBorrar(){
     });
 
 };
+}
+
+
+//Funcion para eliminar Items desde la pantalla de producto.
+//Actualiza el DOM y el JSON.
+function eliminarItem(producto){
+    let itemsCarrito = localStorage.getItem('itemsCarrito');
+    itemsCarrito = parseInt(itemsCarrito);
+    let productosEnCarrito = localStorage.getItem("productosEnCarrito");
+    productosEnCarrito = JSON.parse(productosEnCarrito);
+    let precioTotal = localStorage.getItem("precioTotal");
+    localStorage.setItem("itemsCarrito", itemsCarrito - productosEnCarrito[producto.id].enCarrito);
+    localStorage.setItem("precioTotal", precioTotal - (productosEnCarrito[producto.id].precio * productosEnCarrito[producto.id].enCarrito));
+    $.get(JSONProductos, function(respuesta, estado) {
+        if(estado=="success"){
+                datosObtenidos = respuesta;
+                for (const datos of datosObtenidos){
+                    if (datos.id == producto.id){
+                        idProducto= datos.id;
+                        idProducto = parseInt(idProducto);
+                    }
+                }
+                delete productosEnCarrito[producto.id];
+                localStorage.setItem("productosEnCarrito", JSON.stringify(productosEnCarrito));
+            }
+        });
+    muestraCarrito();
+    cargaCarrito();
 }
