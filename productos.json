@@ -1,0 +1,45 @@
+[
+    {
+      "nombre": "Teclado Genérico",
+      "id": 0,
+      "precio": 2000,
+      "enCarrito": 0,
+      "imagen": "producto1.jpg"
+    },
+    {
+        "nombre": "Teclado RGB 1",
+        "id": 1,
+        "precio": 1000,
+        "enCarrito": 0,
+        "imagen": "producto2.jpg"
+    },
+    {
+        "nombre": "Teclado Colores",
+        "id": 2,
+        "precio": 500,
+        "enCarrito": 0,
+        "imagen": "producto3.jpg"
+    },
+    {
+        "nombre": "Teclado RGB 2",
+        "id": 3,
+        "precio": 250,
+        "enCarrito": 0,
+        "imagen": "producto4.jpg"
+    },
+    {
+        "nombre": "Mouse RGB",
+        "id": 4,
+        "precio": 1250,
+        "enCarrito": 0,
+        "imagen": "producto5.jpg"
+    },
+    {
+        "nombre": "Mouse Inalambrico",
+        "id": 5,
+        "precio": 754,
+        "enCarrito": 0,
+        "imagen": "producto6.jpg"
+    }
+    
+]

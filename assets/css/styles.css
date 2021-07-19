@@ -1,0 +1,303 @@
+html, body {
+  background: #E3E3D8;
+  font-family: sans-serif;
+}
+
+.pantallaPrincipal {
+  background: url(../img/fondoPrincipal.jpg) no-repeat center center fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-size: cover;
+  height: 60vh;
+  position: relative;
+}
+
+.pantallaPrincipal:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.pantallaPrincipal h1 {
+  color: white;
+  position: relative;
+}
+
+/*---------------------- Carrito ---------------------*/
+.carritoFinal {
+  max-width: 900px;
+  margin-top: 50px;
+}
+
+.carritoFinal i {
+  color: lightslategray;
+  cursor: pointer;
+}
+
+.encabezadoCarrito {
+  width: 100%;
+  border-bottom: 4px solid black;
+  margin: 20px auto;
+}
+
+.col-6, .col-2, .col-4 {
+  padding: 0 !important;
+}
+
+.botonCarrito {
+  background-color: #38A1D3;
+}
+
+.productosCarrito {
+  max-width: 1000px;
+}
+
+.iconoCarrito {
+  display: none;
+}
+
+.iconoCarrito {
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.rotation {
+  -webkit-transform: rotate(-24deg);
+  transform: rotate(-24deg);
+}
+
+.totalCarritoContenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.totalCarritoContenedor .totalCarritoTitulo {
+  width: 30%;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.totalCarritoContenedor .totalCarritoMonto {
+  width: 10%;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.botonesContenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.botonesContenedor .btnBorrar {
+  margin-right: 9px;
+}
+
+.btnAgrega {
+  margin-left: 5px;
+}
+
+.col-6, .col-2 {
+  margin-bottom: 5px;
+}
+
+.productoCarrito img {
+  max-height: 75px;
+  width: auto;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  height: 500px;
+  background: white;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  overflow: hidden;
+  border-radius: 10px 10px 10px 10px;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: -webkit-box-shadow 0.5s, -webkit-transform 0.5s;
+  transition: -webkit-box-shadow 0.5s, -webkit-transform 0.5s;
+  transition: box-shadow 0.5s, transform 0.5s;
+  transition: box-shadow 0.5s, transform 0.5s, -webkit-box-shadow 0.5s, -webkit-transform 0.5s;
+}
+
+.wrapper:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper .container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper .container .top {
+  height: 80%;
+  width: 100%;
+}
+
+.wrapper .container .bottom {
+  width: 200%;
+  height: 20%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.wrapper .container .bottom.clicked {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.wrapper .container .bottom h1 {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.wrapper .container .bottom p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.wrapper .container .bottom .left {
+  height: 100%;
+  width: 50%;
+  background: #f4f4f4;
+  position: relative;
+  float: left;
+}
+
+.wrapper .container .bottom .left .details {
+  padding: 20px;
+  float: left;
+  width: calc(70% - 40px);
+}
+
+.wrapper .container .bottom .left .buy {
+  float: right;
+  width: calc(30% - 2px);
+  height: 100%;
+  background: #f1f1f1;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+  border-left: solid thin rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .container .bottom .left .buy i {
+  font-size: 30px;
+  padding: 30px;
+  color: #254053;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.wrapper .container .bottom .left .buy:hover {
+  background: #A6CDDE;
+}
+
+.wrapper .container .bottom .left .buy:hover i {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  color: #00394B;
+}
+
+.wrapper .container .bottom .right {
+  width: 50%;
+  background: #175b79;
+  color: white;
+  float: right;
+  height: 200%;
+  overflow: hidden;
+}
+
+.wrapper .container .bottom .right .details {
+  padding: 20px;
+  padding-left: 0;
+  float: right;
+  width: calc(70% - 20px);
+}
+
+.wrapper .container .bottom .right .done {
+  width: calc(30% - 2px);
+  float: left;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  border-right: solid thin rgba(255, 255, 255, 0.3);
+  height: 50%;
+}
+
+.wrapper .container .bottom .right .done i {
+  font-size: 30px;
+  padding: 30px;
+  color: white;
+}
+
+.wrapper .container .bottom .right .remove {
+  width: calc(30% - 1px);
+  clear: both;
+  border-right: solid thin rgba(255, 255, 255, 0.3);
+  height: 50%;
+  background: #BC3B59;
+  -webkit-transition: background 0.5s, -webkit-transform 0.5s;
+  transition: background 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, background 0.5s;
+  transition: transform 0.5s, background 0.5s, -webkit-transform 0.5s;
+}
+
+.wrapper .container .bottom .right .remove:hover {
+  background: #9B2847;
+}
+
+.wrapper .container .bottom .right .remove:hover i {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.wrapper .container .bottom .right .remove i {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  font-size: 30px;
+  padding: 30px;
+  color: white;
+}
+
+.wrapper .container .bottom .right:hover .remove, .wrapper .container .bottom .right:hover .done {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+/*# sourceMappingURL=styles.css.map */

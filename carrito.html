@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/logo.png" alt="" height="24" class="d-inline-block align-text-top">
+                TecnoStore
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Agregar Producto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link botonCarrito" href="carrito.html"><i class="fas fa-shopping-cart iconoCarrito"></i> Carrito <span id="carritoItems">0</span></a>
+                    </li>
+                    
+                </ul>                
+          </div>
+        </div>
+      </nav>
+
+    <!--Fin Navbar-->
+    
+    <!--Contenedor Principal-->
+    <div class="container-fluid pantallaPrincipal text-center d-flex align-items-center justify-content-center">
+        <h1>Tu Carrito</h1>  
+    </div>
+    <!--Fin Contenedor Principal-->
+
+
+
+    <div class="container carritoFinal">
+        <div class="row encabezadoCarrito justify-content-center text-center">
+            <div class="col-6">Producto</div>
+            <div class="col-2">Precio</div>
+            <div class="col-2">Cantidad</div>
+            <div class="col-2">Total</div>
+        </div>
+        <div class="row productosCarrito align-items-center justify-content-center text-center">
+            
+        </div>
+
+        <div class="botonesContenedor"> 
+            <button class="btn btn-danger btnBorrar">Limpiar Carrito</button>
+            <button class="btnConfirma btn btn-primary">Confirmar Compra</button>
+        </div>
+    </div>
+
+
+
+    <!--Scripts-->
+    <script src="https://kit.fontawesome.com/96fd57ab53.js" crossorigin="anonymous"></script>
+    <script src="assets/js/miarchivo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</body>
+</html>
